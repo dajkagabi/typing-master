@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+/* 
+ Fehér és Méregzöld / Smaragdzöld kombináció
+*/
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Világos háttér és kártya színek */
+
+    /* Nagyon világos, hűvös törtfehér háttér */
+    --bg-main: #f8fafc;
+    /* Hófehér kártyaháttér */
+    --bg-card: #ffffff;
+    /* Finom szürke/zöldes kiemelés az elemek körül */
+    --bg-card-hover: #f1f5f9;
+
+    /* Fő színek (Méregzöld és Smaragd) */
+
+    /* Méregzöld (Emerald-700) a fő gombokhoz és címsorokhoz */
+    --color-primary: #047857;
+    /* Sötétebb méregzöld az egér föléhúzásakor */
+    --color-primary-hover: #065f46;
+    /* Finom világosszürke másodlagos gombokhoz */
+    --color-secondary: #e2e8f0;
+    /* Sötétebb árnyalat a másodlagos gomb hover állapotához */
+    --color-secondary-hover: #cbd5e1;
+
+    /* Szövegszínek a kiváló olvashatóságért */
+
+    /* Nagyon sötét szürkészöld a fő szövegekhez */
+    --text-main: #0f172a;
+    /* Visszafogott szürke a másodlagos feliratokhoz */
+    --text-muted: #475569;
+
+    /* Gépelési állapotok visszajelző színei */
+
+    /* Élénk smaragdzöld a helyesen beírt betűkhöz */
+    --status-correct: #059669;
+    /* Figyelmeztető piros a hibás betűkhöz */
+    --status-incorrect: #e11d48;
+    /* Még be nem gépelt, várakozó betűk színe */
+    --status-untouched: #94a3b8;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@theme inline {
+  --color-app-bg: var(--bg-main);
+  --color-app-card: var(--bg-card);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+  --color-text-main: var(--text-main);
+  --color-text-muted: var(--text-muted);
+  --color-status-correct: var(--status-correct);
+  --color-status-incorrect: var(--status-incorrect);
+  --color-status-untouched: var(--status-untouched);
 }
