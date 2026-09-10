@@ -60,20 +60,6 @@ Az alkalmazás alapértelmezett címe:
 http://localhost:3000
 ```
 
-A fejlesztői oldal automatikusan frissül a forrásfájlok módosításakor.
-
-### Elérés helyi hálózatról
-
-Ha az alkalmazást ugyanazon a hálózaton lévő másik eszközről is meg szeretnéd nyitni, indítsd a szervert minden hálózati interfészen:
-
-Ezután a számítógép helyi IP-címével nyithatod meg, például:
-
-```text
-http://192.168.0.112:3000
-```
-
-Ha a cím nem érhető el, ellenőrizd a Windows tűzfal beállításait, és engedélyezd a Node.js számára a privát hálózati hozzáférést.
-
 ## Használat
 
 1. Válassz egy tesztidőtartamot.
